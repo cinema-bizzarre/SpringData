@@ -1,0 +1,52 @@
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    line-height: 2;
+    text-align: center;
+}
+
+.input {
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.submit_button {
+    background: #5A98D0;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #FLUFF;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.delete_button {
+    font-size: 16px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #FAFF;
+    background: firebrick;
+    border-radius: 10px;
+    padding: 10px 30px;
+    text-decoration: none;
+    display: inline-flex;
+    flex: border-box;
+}
+
+table {
+    border: 0;
+}
+
+table tr,
+table td {
+    border: 1px solid black;
+    text-align: center;
+}
