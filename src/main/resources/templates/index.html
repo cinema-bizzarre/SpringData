@@ -27,14 +27,14 @@
         <tr th:each="p : ${page.getContent()}">
             <td th:text="${p.id}"/>
             <td>
-                <a th:text="${p.title}" th:href="@{'/products/'+${p.id}}"></a>
+                <a th:text="${p.name}" th:href="@{'/products/'+${p.id}}"></a>
             </td>
             <td>
                 <span th:text="${p.price}"/>
                 <a class="btn btn-primary" th:href="@{'/products/'+${p.id}+'/price/inc'}">+</a>
                 <!--                <a class="btn btn-primary" th:href="@{'/products/'+${p.id}+'/price/dec'">-</a>-->
             </td>
-            <td th:text="${p.category.title}"/>
+            <td th:text="${p.category.name}"/>
             </td>
 
             <td>
@@ -60,16 +60,11 @@
             <h4>Отфильтровать товары</h4>
             <li>
                 <span th:text="${'по цене:  от'}"/>
-                <input type="number" name="min" min="0"  value="0" th:value="${filters.minPrice}" autofocus/>
+                <input type="number" name="min" min="0"  value="0" th:value="${minPrice}" autofocus/>
                 <span th:text="${'до: '}"/>
-                <input type="number" name="max" value="0"  th:value="${filters.maxPrice}" min="0"/>
+                <input type="number" name="max" value="0"  th:value="${maxPrice}" min="0"/>
             </li>
             <br>
-            <li>
-                <span th:text="${'По ключевому слову'}"/>
-                <input type="text" name="filter" value="" th:value="${filters.filter}" min="0"/>
-                <br>
-            </li>
 
         </ul>
         <br>

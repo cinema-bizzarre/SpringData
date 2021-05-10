@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import repository.ProductRepository;
 import services.ProductServiceImpl;
 
-@RequestMapping
+@RequestMapping("product")
 @Controller
 public class ProductController {
     private ProductServiceImpl productService;
