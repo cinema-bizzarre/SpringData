@@ -2,6 +2,7 @@ package module;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 import javax.persistence.*;
@@ -10,8 +11,7 @@ import javax.persistence.*;
 @Table(name = "products")
 @Data
 @AllArgsConstructor
-
-
+@NoArgsConstructor
 public class Product {
 
    @Id
@@ -30,31 +30,4 @@ public class Product {
     private Category category;
 
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Product() {
-    }
-
-    public void incrementPrice(int amount) {
-        price +=amount;
-    }
-
-    @Override
-    public String toString() {
-        return this.getName();
-    }
-
-    public String getNameCategory() {
-        return this.getName();
-    }
 }

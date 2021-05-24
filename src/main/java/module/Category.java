@@ -1,10 +1,15 @@
 package module;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
+@Table(name = "category")
+@Data
+@NoArgsConstructor
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,4 +18,7 @@ public class Category {
 
     @Column(name="name")
     private String name;
+
+    @OneToMany(mappedBy = "category")
+    private List<Product> products;
 }
